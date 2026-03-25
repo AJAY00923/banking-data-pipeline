@@ -1,0 +1,33 @@
+2026-03-23 20:45:29,010 - INFO - Logger is working
+2026-03-24 21:06:16,611 - INFO - Pipeline started
+2026-03-24 21:06:16,612 - INFO - Starting data ingestion
+2026-03-24 21:06:16,654 - INFO - Data loaded successfully. Shape: (50000, 15)
+2026-03-24 21:06:16,654 - INFO - Starting data transformation
+2026-03-24 21:06:16,745 - INFO - Data transformation completed successfully
+2026-03-24 21:06:16,745 - INFO - Starting load to PostgreSQL
+2026-03-24 21:06:19,853 - INFO - Loaded 50000 records into PostgreSQL successfully
+2026-03-24 21:06:19,858 - INFO - Pipeline completed successfully
+2026-03-24 21:10:12,386 - INFO - Pipeline started
+2026-03-24 21:10:12,386 - INFO - Starting data ingestion
+2026-03-24 21:10:12,422 - INFO - Data loaded successfully. Shape: (50000, 15)
+2026-03-24 21:10:12,422 - INFO - Starting data transformation
+2026-03-24 21:10:12,509 - INFO - Data transformation completed successfully
+2026-03-24 21:10:12,509 - INFO - Starting load to PostgreSQL
+2026-03-24 21:10:15,722 - INFO - Loaded 50000 records into PostgreSQL successfully
+2026-03-24 21:10:15,734 - INFO - Pipeline completed successfully
+2026-03-24 21:14:10,568 - INFO - Pipeline started
+2026-03-24 21:14:10,568 - INFO - Starting data ingestion
+2026-03-24 21:14:10,603 - INFO - Data loaded successfully. Shape: (50000, 15)
+2026-03-24 21:14:10,603 - INFO - Starting data transformation
+2026-03-24 21:14:10,690 - INFO - Data transformation completed successfully
+2026-03-24 21:14:10,690 - INFO - Starting load to PostgreSQL
+2026-03-24 21:14:14,635 - INFO - Load completed. Attempted to insert 50000 records.
+2026-03-24 21:14:14,643 - INFO - Pipeline completed successfully
+2026-03-24 21:14:47,647 - INFO - Pipeline started
+2026-03-24 21:14:47,647 - INFO - Starting data ingestion
+2026-03-24 21:14:47,684 - INFO - Data loaded successfully. Shape: (50000, 15)
+2026-03-24 21:14:47,684 - INFO - Starting data transformation
+2026-03-24 21:14:47,770 - INFO - Data transformation completed successfully
+2026-03-24 21:14:47,770 - INFO - Starting load to PostgreSQL
+2026-03-24 21:14:51,607 - INFO - Load completed. Attempted to insert 50000 records.
+2026-03-24 21:14:51,614 - INFO - Pipeline completed successfully
