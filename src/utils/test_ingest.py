@@ -1,5 +1,5 @@
 from ingest import load_data
-from utils.logger import get_logger
+from logger import get_logger
 
 logger = get_logger("logs/pipeline.log")
 

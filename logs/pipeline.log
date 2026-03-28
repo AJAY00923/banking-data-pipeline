@@ -31,3 +31,7 @@
 2026-03-24 21:14:47,770 - INFO - Starting load to PostgreSQL
 2026-03-24 21:14:51,607 - INFO - Load completed. Attempted to insert 50000 records.
 2026-03-24 21:14:51,614 - INFO - Pipeline completed successfully
+2026-03-27 18:48:00,962 - INFO -  Starting of data ingestion
+2026-03-27 18:48:00,998 - INFO - Data loaded sucessfully. shape:(50000, 15)
+2026-03-27 18:49:21,261 - INFO -  Starting of data ingestion
+2026-03-27 18:49:21,295 - INFO - Data loaded sucessfully. shape:(50000, 15)

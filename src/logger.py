@@ -1,5 +1,5 @@
 import logging
-def get_logger(log_file):
+def get_logger(log_file="logs/pipeline.log"):
     logger = logging.getLogger("pipeline_logger")
     logger.setLevel(logging.INFO)
 
@@ -10,3 +10,5 @@ def get_logger(log_file):
         logger.addHandler(handler)
 
     return logger
+
+
