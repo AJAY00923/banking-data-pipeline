@@ -1,0 +1,12 @@
+database:
+  dbname: banking_pipeline
+  user: ajaygopavarapu
+  host: localhost
+  port: 5432
+  password: ""
+
+files:
+  input_path: data/raw/transactions.csv
+
+logging:
+  log_file: logs/pipeline.log

@@ -12,7 +12,8 @@ def transform_data(df: pd.DataFrame, logger) -> pd.DataFrame:
             format="mixed",
             errors="coerce"
         )
-
+        # check duplicates
+        df = df.drop_duplicates(subset=["TransactionID"])
         # add audit columns
         df["load_timestamp"] = datetime.now()
         df["batch_id"] = "batch_001"
