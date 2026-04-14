@@ -43,25 +43,25 @@ The pipeline reads raw transaction data, cleans and validates it, filters only n
 ---
 
 ## Project Structure
-
+```bash
 banking-data-pipeline/
 ├── config/
-│ └── config.yaml
+│   └── config.yaml
 ├── data/
-│ ├── raw/
-│ └── processed/
+│   ├── raw/
+│   └── processed/
 ├── logs/
 ├── src/
-│ ├── ingest.py
-│ ├── transform.py
-│ ├── db_load.py
-│ ├── logger.py
-│ └── main.py
+│   ├── ingest.py
+│   ├── transform.py
+│   ├── db_load.py
+│   ├── logger.py
+│   └── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ---
-
+```
 ## How to Run
 
 1. Clone the repository  
