@@ -263,3 +263,337 @@ dtype: int64
 2026-04-08 20:25:47,631 - INFO - New records to load after filtering: 0
 2026-04-08 20:25:47,631 - INFO - No new data to insert. Skipping load step.
 2026-04-08 20:25:47,632 - INFO - Pipeline completed successfully
+2026-04-13 18:43:16,541 - INFO -  Starting of data ingestion
+2026-04-13 18:43:16,579 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:43:26,520 - INFO -  Starting of data ingestion
+2026-04-13 18:43:26,556 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:48:46,390 - INFO - Pipeline started
+2026-04-13 18:48:46,390 - INFO -  Starting of data ingestion
+2026-04-13 18:48:46,437 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:48:46,437 - INFO - Starting data transformation
+2026-04-13 18:48:46,529 - INFO - Data transformation completed successfully
+2026-04-13 18:48:46,529 - INFO - Starting data validation
+2026-04-13 18:48:46,535 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 18:48:46,553 - INFO - Duplicate rows: 0
+2026-04-13 18:48:46,553 - INFO - Invalid TransactionDate values: 0
+2026-04-13 18:48:46,553 - INFO - Negative TransactionAmount values: 0
+2026-04-13 18:48:46,553 - INFO - Data validation completed successfully
+2026-04-13 18:48:46,553 - INFO - Starting load to PostgreSQL
+2026-04-13 18:48:46,612 - INFO - Last loaded transaction_date in DB: 2026-12-01 00:00:00
+2026-04-13 18:48:46,612 - INFO - New records to load after filtering: 0
+2026-04-13 18:48:46,612 - INFO - No new data to insert. Skipping load step.
+2026-04-13 18:48:46,612 - INFO - Pipeline completed successfully
+2026-04-13 18:53:55,997 - INFO - Pipeline started
+2026-04-13 18:53:55,998 - INFO -  Starting of data ingestion
+2026-04-13 18:53:56,035 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:53:56,035 - INFO - Starting data transformation
+2026-04-13 18:53:56,131 - INFO - Data transformation completed successfully
+2026-04-13 18:53:56,131 - INFO - Starting data validation
+2026-04-13 18:53:56,138 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 18:53:56,156 - INFO - Duplicate rows: 0
+2026-04-13 18:53:56,156 - INFO - Invalid TransactionDate values: 0
+2026-04-13 18:53:56,156 - INFO - Negative TransactionAmount values: 0
+2026-04-13 18:53:56,156 - INFO - Data validation completed successfully
+2026-04-13 18:53:56,156 - INFO - Starting load to PostgreSQL
+2026-04-13 18:53:56,182 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 18:53:56,183 - INFO - New records to load after filtering: 1
+2026-04-13 18:53:56,189 - INFO - Inserted records 0 to 0
+2026-04-13 18:53:56,189 - INFO - Load completed. Attempted to insert 1 records.
+2026-04-13 18:53:56,189 - INFO - Pipeline completed successfully
+2026-04-13 18:55:07,325 - INFO - Pipeline started
+2026-04-13 18:55:07,325 - INFO -  Starting of data ingestion
+2026-04-13 18:55:07,359 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:55:07,359 - INFO - Starting data transformation
+2026-04-13 18:55:07,448 - INFO - Data transformation completed successfully
+2026-04-13 18:55:07,448 - INFO - Starting data validation
+2026-04-13 18:55:07,454 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 18:55:07,472 - INFO - Duplicate rows: 0
+2026-04-13 18:55:07,472 - INFO - Invalid TransactionDate values: 0
+2026-04-13 18:55:07,473 - INFO - Negative TransactionAmount values: 0
+2026-04-13 18:55:07,473 - INFO - Data validation completed successfully
+2026-04-13 18:55:07,473 - INFO - Starting load to PostgreSQL
+2026-04-13 18:55:07,492 - INFO - No existing data found. Loading full dataset.
+2026-04-13 18:55:08,382 - INFO - Inserted records 0 to 4999
+2026-04-13 18:55:08,488 - INFO - Inserted records 5000 to 9999
+2026-04-13 18:55:08,586 - INFO - Inserted records 10000 to 14999
+2026-04-13 18:55:08,682 - INFO - Inserted records 15000 to 19999
+2026-04-13 18:55:08,779 - INFO - Inserted records 20000 to 24999
+2026-04-13 18:55:08,879 - INFO - Inserted records 25000 to 29999
+2026-04-13 18:55:08,976 - INFO - Inserted records 30000 to 34999
+2026-04-13 18:55:09,075 - INFO - Inserted records 35000 to 39999
+2026-04-13 18:55:09,173 - INFO - Inserted records 40000 to 44999
+2026-04-13 18:55:09,271 - INFO - Inserted records 45000 to 49999
+2026-04-13 18:55:09,271 - INFO - Inserted records 50000 to 50000
+2026-04-13 18:55:09,271 - INFO - Load completed. Attempted to insert 50001 records.
+2026-04-13 18:55:09,273 - INFO - Pipeline completed successfully
+2026-04-13 18:59:21,986 - INFO - Pipeline started
+2026-04-13 18:59:21,987 - INFO -  Starting of data ingestion
+2026-04-13 18:59:22,019 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 18:59:22,019 - INFO - Starting data transformation
+2026-04-13 18:59:22,107 - INFO - Data transformation completed successfully
+2026-04-13 18:59:22,107 - INFO - Starting data validation
+2026-04-13 18:59:22,113 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 18:59:22,131 - INFO - Duplicate rows: 0
+2026-04-13 18:59:22,131 - INFO - Invalid TransactionDate values: 0
+2026-04-13 18:59:22,131 - INFO - Negative TransactionAmount values: 0
+2026-04-13 18:59:22,131 - INFO - Data validation completed successfully
+2026-04-13 18:59:22,131 - INFO - Starting load to PostgreSQL
+2026-04-13 18:59:22,158 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 18:59:22,159 - INFO - New records to load after filtering: 1
+2026-04-13 18:59:22,162 - INFO - Inserted records 0 to 0
+2026-04-13 18:59:22,162 - INFO - Load completed. Attempted to insert 1 records.
+2026-04-13 18:59:22,162 - INFO - Pipeline completed successfully
+2026-04-13 19:00:32,835 - INFO - Pipeline started
+2026-04-13 19:00:32,835 - INFO -  Starting of data ingestion
+2026-04-13 19:00:32,870 - INFO - Data loaded sucessfully. shape:(50002, 15)
+2026-04-13 19:00:32,870 - INFO - Starting data transformation
+2026-04-13 19:00:32,955 - INFO - Data transformation completed successfully
+2026-04-13 19:00:32,956 - INFO - Starting data validation
+2026-04-13 19:00:32,962 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 19:00:32,979 - INFO - Duplicate rows: 0
+2026-04-13 19:00:32,979 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:00:32,979 - INFO - Negative TransactionAmount values: 0
+2026-04-13 19:00:32,979 - INFO - Data validation completed successfully
+2026-04-13 19:00:32,979 - INFO - Starting load to PostgreSQL
+2026-04-13 19:00:33,009 - INFO - Last loaded transaction_date in DB: 2026-12-01 00:00:00
+2026-04-13 19:00:33,009 - INFO - New records to load after filtering: 0
+2026-04-13 19:00:33,010 - INFO - No new data to insert. Skipping load step.
+2026-04-13 19:00:33,010 - INFO - Pipeline completed successfully
+2026-04-13 19:10:07,632 - INFO - Pipeline started
+2026-04-13 19:10:07,632 - INFO -  Starting of data ingestion
+2026-04-13 19:10:07,667 - INFO - Data loaded sucessfully. shape:(50001, 15)
+2026-04-13 19:10:07,667 - INFO - Starting data transformation
+2026-04-13 19:10:07,757 - INFO - Data transformation completed successfully
+2026-04-13 19:10:07,757 - INFO - Starting data validation
+2026-04-13 19:10:07,763 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 19:10:07,781 - INFO - Duplicate rows: 0
+2026-04-13 19:10:07,781 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:10:07,782 - INFO - Negative TransactionAmount values: 0
+2026-04-13 19:10:07,782 - INFO - Data validation completed successfully
+2026-04-13 19:10:07,782 - INFO - Starting load to PostgreSQL
+2026-04-13 19:10:07,813 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 19:10:07,813 - INFO - New records to load after filtering: 0
+2026-04-13 19:10:07,813 - INFO - No new data to insert. Skipping load step.
+2026-04-13 19:10:07,813 - INFO - Pipeline completed successfully
+2026-04-13 19:15:27,367 - INFO - Pipeline started
+2026-04-13 19:15:27,367 - INFO -  Starting of data ingestion
+2026-04-13 19:15:27,400 - INFO - Data loaded sucessfully. shape:(50001, 15)
+2026-04-13 19:15:27,400 - INFO - Starting data transformation
+2026-04-13 19:15:27,485 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:15:27,487 - INFO - Future-dated rows: 0
+2026-04-13 19:15:27,490 - INFO - Duplicate rows: 1
+2026-04-13 19:15:27,494 - INFO - Rows after transformation: 50000
+2026-04-13 19:15:27,494 - INFO - Data transformation completed successfully
+2026-04-13 19:15:27,495 - INFO - Starting data validation
+2026-04-13 19:15:27,501 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 19:15:27,518 - INFO - Duplicate rows: 0
+2026-04-13 19:15:27,518 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:15:27,519 - INFO - Negative TransactionAmount values: 0
+2026-04-13 19:15:27,519 - INFO - Data validation completed successfully
+2026-04-13 19:15:27,519 - INFO - Starting load to PostgreSQL
+2026-04-13 19:15:27,549 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 19:15:27,549 - INFO - New records to load after filtering: 0
+2026-04-13 19:15:27,549 - INFO - No new data to insert. Skipping load step.
+2026-04-13 19:15:27,549 - INFO - Pipeline completed successfully
+2026-04-13 19:19:20,150 - INFO - Pipeline started
+2026-04-13 19:19:20,150 - INFO -  Starting of data ingestion
+2026-04-13 19:19:20,186 - INFO - Data loaded sucessfully. shape:(50001, 15)
+2026-04-13 19:19:20,186 - INFO - Starting data transformation
+2026-04-13 19:19:20,272 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:19:20,273 - INFO - Future-dated rows: 0
+2026-04-13 19:19:20,276 - INFO - Duplicate rows: 1
+2026-04-13 19:19:20,281 - INFO - Rows after transformation: 50000
+2026-04-13 19:19:20,281 - INFO - Data transformation completed successfully
+2026-04-13 19:19:20,282 - INFO - Starting data validation
+2026-04-13 19:19:20,288 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 19:19:20,305 - INFO - Duplicate rows: 0
+2026-04-13 19:19:20,305 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:19:20,305 - INFO - Negative TransactionAmount values: 0
+2026-04-13 19:19:20,305 - INFO - Data validation completed successfully
+2026-04-13 19:19:20,305 - INFO - Starting load to PostgreSQL
+2026-04-13 19:19:20,332 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 19:19:20,333 - INFO - New records to load after filtering: 0
+2026-04-13 19:19:20,333 - INFO - No new data to insert. Skipping load step.
+2026-04-13 19:19:20,333 - INFO - Pipeline completed successfully
+2026-04-13 19:33:03,237 - INFO - Pipeline started
+2026-04-13 19:33:03,237 - INFO -  Starting of data ingestion
+2026-04-13 19:33:03,274 - INFO - Data loaded sucessfully. shape:(50001, 15)
+2026-04-13 19:33:03,274 - INFO - Starting data transformation
+2026-04-13 19:33:03,371 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:33:03,373 - INFO - Future-dated rows: 0
+2026-04-13 19:33:03,377 - INFO - Duplicate rows: 1
+2026-04-13 19:33:03,382 - INFO - Rows after transformation: 50000
+2026-04-13 19:33:03,382 - INFO - Data transformation completed successfully
+2026-04-13 19:33:03,382 - INFO - Starting data validation
+2026-04-13 19:33:03,388 - INFO - Null counts:
+TransactionID          0
+AccountID              0
+TransactionAmount      0
+TransactionDate        0
+TransactionType        0
+Location               0
+DeviceID               0
+IP Address             0
+MerchantID             0
+Channel                0
+CustomerAge            0
+CustomerOccupation     0
+TransactionDuration    0
+LoginAttempts          0
+AccountBalance         0
+load_timestamp         0
+batch_id               0
+dtype: int64
+2026-04-13 19:33:03,409 - INFO - Duplicate rows: 0
+2026-04-13 19:33:03,409 - INFO - Invalid TransactionDate values: 0
+2026-04-13 19:33:03,409 - INFO - Negative TransactionAmount values: 0
+2026-04-13 19:33:03,409 - INFO - Data validation completed successfully
+2026-04-13 19:33:03,409 - INFO - Starting load to PostgreSQL
+2026-04-13 19:33:03,435 - INFO - Last loaded transaction_date in DB: 2025-12-31 00:00:00
+2026-04-13 19:33:03,436 - INFO - New records to load after filtering: 0
+2026-04-13 19:33:03,436 - INFO - No new data to insert. Skipping load step.
+2026-04-13 19:33:03,436 - INFO - Pipeline completed successfully

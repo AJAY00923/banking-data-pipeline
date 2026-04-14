@@ -3,11 +3,10 @@ from psycopg2.extras import execute_values
 import pandas as pd
 
 
-# Get latest transaction_date already loaded in PostgreSQL
 def get_max_transaction_date(conn):
     """
-    Fetch the maximum transaction_date from the target table.
-    This helps us implement incremental loading.
+    Fetch the latest transaction_date already loaded in PostgreSQL.
+    Used for incremental loading.
     """
     cur = conn.cursor()
     cur.execute("SELECT MAX(transaction_date) FROM public.transactions;")
@@ -21,10 +20,10 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
     Load transformed dataframe into PostgreSQL.
 
     Steps:
-    1. Read DB connection settings from YAML config
+    1. Read DB connection settings from config
     2. Check latest transaction_date already in DB
     3. Filter only new records (incremental load)
-    4. Insert data in chunks using execute_values
+    4. Bulk insert rows with ON CONFLICT protection
     """
 
     logger.info("Starting load to PostgreSQL")
@@ -33,7 +32,6 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
     cur = None
 
     try:
-        # Read DB connection settings from config.yaml
         db_config = config["database"]
 
         conn = psycopg2.connect(
@@ -46,30 +44,22 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
 
         cur = conn.cursor()
 
-        # =========================
-        # STEP 1: Incremental Logic
-        # =========================
-        # Find the latest transaction date already present in DB
+        # incremental load logic
         max_date = get_max_transaction_date(conn)
 
         if max_date:
             logger.info(f"Last loaded transaction_date in DB: {max_date}")
-
-            # Keep only rows newer than the latest loaded date
-            df = df[df["TransactionDate"] > max_date]
-
+            df = df[df["TransactionDate"] > max_date].copy()
             logger.info(f"New records to load after filtering: {len(df)}")
         else:
             logger.info("No existing data found. Loading full dataset.")
 
-        # If no new records exist, skip insert step
+        # nothing new to load
         if df.empty:
             logger.info("No new data to insert. Skipping load step.")
             return
 
-        # =========================
-        # STEP 2: Prepare records
-        # =========================
+        # prepare records
         records = [
             (
                 row["TransactionID"],
@@ -87,11 +77,12 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
                 row["TransactionDuration"],
                 row["LoginAttempts"],
                 row["AccountBalance"],
+                row["load_timestamp"],
+                row["batch_id"],
             )
             for _, row in df.iterrows()
         ]
 
-        # SQL query for bulk insert
         insert_query = """
             INSERT INTO public.transactions (
                 transaction_id,
@@ -108,24 +99,31 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
                 customer_occupation,
                 transaction_duration,
                 login_attempts,
-                account_balance
+                account_balance,
+                load_timestamp,
+                batch_id
             )
             VALUES %s
             ON CONFLICT (transaction_id) DO NOTHING
         """
 
-        # =========================
-        # STEP 3: Insert in chunks
-        # =========================
         chunk_size = 5000
+        total_inserted_attempted = 0
 
         for i in range(0, len(records), chunk_size):
             chunk = records[i:i + chunk_size]
             execute_values(cur, insert_query, chunk, page_size=1000)
             conn.commit()
-            logger.info(f"Inserted records {i} to {i + len(chunk) - 1}")
 
-        logger.info(f"Load completed. Attempted to insert {len(records)} records.")
+            total_inserted_attempted += len(chunk)
+            logger.info(
+                f"Processed chunk {i // chunk_size + 1}: "
+                f"rows {i} to {i + len(chunk) - 1}"
+            )
+
+        logger.info(
+            f"Load completed successfully. Attempted to insert {total_inserted_attempted} records."
+        )
 
     except Exception as e:
         if conn:
