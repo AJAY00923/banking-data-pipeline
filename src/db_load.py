@@ -77,6 +77,7 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
                 row["TransactionDuration"],
                 row["LoginAttempts"],
                 row["AccountBalance"],
+                row["IsFraud"],
                 row["load_timestamp"],
                 row["batch_id"],
             )
@@ -100,6 +101,7 @@ def load_to_postgres(df: pd.DataFrame, logger, config) -> None:
                 transaction_duration,
                 login_attempts,
                 account_balance,
+                is_fraud,
                 load_timestamp,
                 batch_id
             )
